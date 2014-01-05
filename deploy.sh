@@ -43,4 +43,4 @@ function deploy() {
     touch bargoud/wsgi.py
 }
 
-remote deploy bargoud@tina:pescator/
+remote deploy bargoud@tina:bargoud/
