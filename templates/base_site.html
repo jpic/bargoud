@@ -2,7 +2,7 @@
 {% load fiber_tags compress i18n static %}
 <html>
     <head>
-        <title>{% block head_title %}{% endblock %}</title>
+        <title>Taoufik Bargoud: {% block head_title %}{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         {# All less css goes in static/main.less, this handles it #}
@@ -32,13 +32,31 @@
     </head>
     <body class="{% block body_class %}{% endblock %}">
 
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Taoufik Bargoud</a>
+        </div>
+        <div class="navbar-collapse collapse">
         {% block menu %}
         {% show_menu "mainmenu" 1 1 %}
         {% endblock %}
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
 
+    <div class="container">
         {% block body %}
         <h1>Hello, world!</h1>
         {% endblock %}
+    </div>
 
         {% compress js %}{# All js go here #}
         <script type="text/javascript" src="{% static 'bower_components/jquery/jquery.js' %}"></script>
