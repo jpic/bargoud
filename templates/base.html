@@ -1,0 +1,10 @@
+{% extends 'base_site.html' %}
+{% load fiber_tags %}
+
+{% block head_title %}{% block title %}{{ fiber_page.title }}{% endblock %}{% endblock %}
+
+{% block body_class %}{{ fiber_page.title|slugify }}{% endblock %}
+
+{% block body %}
+{% show_page_content "main" %}
+{% endblock %}

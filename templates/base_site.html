@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load compress i18n static %}
+{% load fiber_tags compress i18n static %}
 <html>
     <head>
         <title>{% block head_title %}{% endblock %}</title>
@@ -30,7 +30,12 @@
         
         {% block extra_head %}{% endblock %}
     </head>
-    <body>
+    <body class="{% block body_class %}{% endblock %}">
+
+        {% block menu %}
+        {% show_menu "mainmenu" 1 1 %}
+        {% endblock %}
+
         {% block body %}
         <h1>Hello, world!</h1>
         {% endblock %}

@@ -17,6 +17,7 @@ django-modeltranslation
 south
 django-autocomplete-light
 django-bower
+django-fiber
 
 # for docs
 sphinx
