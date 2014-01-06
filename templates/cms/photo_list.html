@@ -14,7 +14,7 @@
           </ol>
           <div class="carousel-inner">
             {% for photo in photo_list %}
-            <div class="item active">
+            <div class="item {% if forloop.first %}active{% endif %}">
                 <img src="{% thumbnail photo.photo 960x478 %}" alt="{{ photo.title }}">
             </div>
             {% endfor %}
