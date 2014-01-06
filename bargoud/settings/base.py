@@ -52,6 +52,7 @@ MIDDLEWARE_CLASSES = (
 TEMPLATE_CONTEXT_PROCESSORS += (
     'django.core.context_processors.request',
     'yourlabs.context_processors.expose_settings',
+    'cms.context_processors.home_photos',
 )
 
 EXPOSE_SETTINGS = ('DEBUG', 'COMPRESS_ENABLED')
