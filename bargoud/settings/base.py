@@ -84,7 +84,7 @@ gettext = lambda s: s
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 TIME_ZONE = 'Europe/Paris'
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
