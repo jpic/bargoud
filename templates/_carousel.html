@@ -15,6 +15,12 @@
             {% block image %}
                 <img src="{% thumbnail photo.photo 700x400 autocrop crop="smart" upscale %}" alt="First slide">
             {% endblock %}
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h2>{{ photo.title }}</h2>
+                </div>
+            </div>
           </div>
           {% endfor %}
         </div>
