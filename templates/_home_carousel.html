@@ -1,0 +1,6 @@
+{% extends '_carousel.html' %}
+{% load thumbnail %}
+
+{% block image %}
+    <img src="{% thumbnail photo.photo 700x400 autocrop crop="smart" upscale %}" alt="First slide">
+{% endblock %}

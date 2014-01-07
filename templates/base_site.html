@@ -53,25 +53,7 @@
 
     <div class="container">
         {% if request.path == '/' %}
-        <div style="margin-left: auto; margin-right: auto; display: block; max-width: 960px;">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                {% for photo in home_photos %}
-                <li data-target="#myCarousel" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
-                {% endfor %}
-              </ol>
-              <div class="carousel-inner">
-                {% for photo in home_photos %}
-                <div class="item {% if forloop.first %}active{% endif %}" style="text-align: center">
-                  <img src="{% thumbnail photo.photo 700x400 autocrop crop="smart" upscale %}" alt="First slide">
-                </div>
-                {% endfor %}
-              </div>
-              <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div><!-- /.carousel -->
+            {% include '_home_carousel.html' with photo_list=home_photos %}
         {% endif %}
 
         {% block body %}
