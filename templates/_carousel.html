@@ -16,11 +16,14 @@
                 <img src="{% thumbnail photo.photo 700x400 autocrop crop="smart" upscale %}" alt="First slide">
             {% endblock %}
 
+            {% if photo.title %}
             <div class="container">
                 <div class="carousel-caption">
                     <h2>{{ photo.title }}</h2>
                 </div>
             </div>
+            {% endif %}
+
           </div>
           {% endfor %}
         </div>
