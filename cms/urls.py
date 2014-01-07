@@ -5,5 +5,5 @@ from .models import Photo
 
 
 urlpatterns = patterns('',
-    url(r'^$', generic.ListView.as_view(model=Photo), name='cms_photo_list')
+    url(r'^$', generic.ListView.as_view(queryset=Photo.objects.filter(on_home=False)), name='cms_photo_list')
 )
