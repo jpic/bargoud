@@ -1,26 +1,6 @@
 @import "bower_components/bootstrap/less/bootstrap.less";
 @icon-font-path: "/public/static/bower_components/bootstrap/dist/fonts/";
 
-body {
-  padding-top: 66px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
-
-#myCarousel .carouser-inner,
-#myCarousel .carouser-inner .item
-{
-    text-align: center;
-}
-
-#myCarousel img {
-    max-width: 100%; height: auto;
-}
-
 @font-face {
     font-family: bazar;
     src: url("/public/static/bazar.woff") format('woff');
@@ -35,12 +15,33 @@ body {
 
 @font-family-sans-serif:  Quando, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Quando, Georgia, "Times New Roman", Times, serif;
+@font-size-base:          20px;
+
+
+body {
+  font-family: Quando, "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: white;
+}
+
+#myCarousel .carouser-inner,
+#myCarousel .carouser-inner .item
+{
+    text-align: center;
+}
+
+#myCarousel img {
+    max-width: 100%; height: auto;
+}
 
 .navbar
 {
     opacity: 0.9;
     font-family: bazar;
-    height: 66px;
+}
+
+.navbar-collapse.navbar-right 
+{
+    background-color: black;
 }
 
 .container h1,
@@ -50,31 +51,14 @@ body {
     font-family: bazar;
 }
 
-a.navbar-brand {
-    font-family: arabesque;
-} 
-
-.navbar .navbar-brand {
-    line-height: 1em;
-    font-size: 5em;
-}
-
 .navbar-default li {
     padding-top:10px;
 }
 
 .navbar-default .navbar-nav > li > a {
-    font-size: 1.6em;
     color: white !important;
 }
 
-@font-size-base:          20px;
-
 ul li {
     display: inline;
-}
-
-body {
-  font-family: Quando, "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  color: white;
 }
