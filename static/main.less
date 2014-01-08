@@ -2,7 +2,7 @@
 @icon-font-path: "/public/static/bower_components/bootstrap/dist/fonts/";
 
 body {
-  padding-top: 70px;
+  padding-top: 66px;
 }
 
 @media (min-width: 768px) {
@@ -22,12 +22,59 @@ body {
 }
 
 @font-face {
+    font-family: bazar;
+    src: url("/public/static/bazar.woff") format('woff');
+}
+
+@font-face {
     font-family: arabesque;
     src: url("/public/static/arabesque.woff") format('woff');
 }
 
-h1, h2, h3, h4, .navbar
+@import url(http://fonts.googleapis.com/css?family=Quando);
+
+@font-family-sans-serif:  Quando, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Quando, Georgia, "Times New Roman", Times, serif;
+
+.navbar
 {
-    font-family: arabesque;
+    opacity: 0.9;
+    font-family: bazar;
+    height: 66px;
 }
 
+.container h1,
+.container h2,
+.container h3,
+.container h4 {
+    font-family: bazar;
+}
+
+a.navbar-brand {
+    font-family: arabesque;
+} 
+
+.navbar .navbar-brand {
+    line-height: 1em;
+    font-size: 5em;
+}
+
+.navbar-default li {
+    padding-top:10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 1.6em;
+    color: white !important;
+}
+
+@font-size-base:          20px;
+
+ul li {
+    display: inline;
+}
+
+body {
+  font-family: Quando, "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: white;
+}
