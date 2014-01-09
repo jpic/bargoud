@@ -34,13 +34,19 @@ body {
     max-width: 100%; height: auto;
 }
 
+.navbar-default {
+    opacity: 0.9;
+}
+
 .navbar
 {
-    opacity: 0.9;
     font-family: bazar;
 }
 
-.navbar-collapse.navbar-right 
+.navbar-collapse.in, 
+.navbar-collapse.collapsing,
+.navbar-collapse.in + div ,
+.navbar-collapse.collapsing + div
 {
     background-color: black;
 }
@@ -95,18 +101,25 @@ h1, h2, h3, h4
 
   a.navbar-brand {
       font-family: arabesque;
-  } 
+  }
+
+  .navbar-collapse.collapse {
+    position: absolute; 
+    right: 400px
+  }
 }
 
 @media (max-width: 1050px) {
   .navbar {
-    height: 170px;
+    height: 100px;
   }
 
   body {
-    padding-top: 170px;
+    padding-top: 100px;
   }
-
+  .navbar-default li {
+    padding: 0;
+  }
 }
 
 @media (max-width: 768px) {
